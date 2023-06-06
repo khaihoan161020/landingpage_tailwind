@@ -18,12 +18,12 @@ export default function Menu ({direction = 'row'}: MenuProps) {
             link: '/service'
         },
         {
-            name: 'Testimotionial',
-            link: '/'
+            name: 'Testimonial',
+            link: '/testi-monial'
         },
         {
-            name: 'Home',
-            link: '/Contact'
+            name: 'Contact',
+            link: '/contact'
         },
     ]
     return (

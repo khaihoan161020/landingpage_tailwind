@@ -25,7 +25,9 @@ Install with npm
   yarn install --force
 ```
     
-## Related
+## Related Coming Soon Modal
 
-Remove data in LocalStorage to show Modal Coming Soon
-
+- Remove data in LocalStorage to show Modal Coming Soon
+- set countTime
++ countTime > 0: modal will be show
++ countTime = -1: modal never show again
