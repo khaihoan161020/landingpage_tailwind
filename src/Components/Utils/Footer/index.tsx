@@ -1,13 +1,14 @@
+import Button from '@/Components/Button'
+import Heading from '@/Components/Heading'
 import Image from 'next/image'
 import Link from 'next/link'
 
-
 type MenuType = {
-    name: string,
+    name: string
     url: string
 }
 type subMenuType = {
-    name: string,
+    name: string
     menu: Array<MenuType>
 }
 export default function Footer() {
@@ -138,35 +139,60 @@ export default function Footer() {
         }
     ]
     return (
-        <div className='bg-gradient-blue sm:p-12 py-12 px-3 text-white/80'>
-            <div className='container grid grid-cols-7 gap-6'>
-                <div className='lg:col-span-3 col-span-7'>
-                    <Image src={'/Logo.png'} alt='logo' width={135} height={30} className='' />
-                    <p className='py-7 inline-block'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
-                        laboreet dolore magna aliqua enim minim veniam.
-                    </p>
-                    <div className='flex gap-3'>
-                        {iconPhone}
-                        <span className='text-inherit'>(+84) 123456789</span>
-                    </div>
-                    <div className='flex gap-3'>
-                        {iconEmail}
-                        <span className='text-inherit'>translang@gmail.com</span>
-                    </div>
-                    <div className='flex gap-3'>
-                        {iconAddress}
-                        <span className='text-inherit'>01 Central Park, NYC</span>
-                    </div>
+        <div className='bg-gradient-blue mt-36 text-white/80 relative '>
+            <div
+                className={`absolute xl:-top-[150px] lg:-top-[120px] md:-top-[90px] -top-[70px] left-1/2 -translate-x-1/2 md:w-10/12 w-11/12 xl:h-[300px] lg:h-[240px] md:h-[180px] h-[140px] bg-slate-50 
+                rounded-2xl justify-between items-center lg:py-12 lg:px-24 md:py-8 md:px-12 py-4 px-6
+                md:flex block
+                `}
+                style={{ clipPath: 'polygon(0 0, 100% 0, 100% 70%, 0% 100%)' }}
+            >
+                <div className=''>
+                    <span className='text-sub-gray 2xl:text-2xl lg:text-base text-xs block'>{`So What's Next?`}</span>
+                    <Heading content={`Are You Ready? Let's work!`} />
                 </div>
-                <div className='lg:col-span-4 col-span-7'>
-                    <div className='grid grid-cols-4'>
-                        {subMenu.map((e: subMenuType, indexP: number) => <div key={indexP} className="col-span-4 sm:col-span-1">
-                            <span className='text-[#f5f5f5] text-center sm:text-left font-bold text-xl block sm:mb-7 sm:mt-0 mt-3 mb-1 '>{e.name}</span>
-                            {e.menu.map((sub: MenuType, indexC: number) => <Link href={sub.url} key={indexC} className="block sm:py-2 py-1 text-inherit text-center sm:text-left">
-                                {sub.name}
-                            </Link>)}
-                        </div>)}
+                <Button name='CONTACT US' variant='default' />
+            </div>
+            <div className='mt-36 xl:pt-[240px] lg:pt-[180px] pt-24 pb-8' >
+                <div className='container grid grid-cols-7 gap-6'>
+                    <div className='lg:col-span-3 col-span-7'>
+                        <Image src={'/Logo.png'} alt='logo' width={135} height={30} className='' />
+                        <p className='py-7 inline-block'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
+                            laboreet dolore magna aliqua enim minim veniam.
+                        </p>
+                        <div className='flex gap-3'>
+                            {iconPhone}
+                            <span className='text-inherit'>(+84) 123456789</span>
+                        </div>
+                        <div className='flex gap-3'>
+                            {iconEmail}
+                            <span className='text-inherit'>translang@gmail.com</span>
+                        </div>
+                        <div className='flex gap-3'>
+                            {iconAddress}
+                            <span className='text-inherit'>01 Central Park, NYC</span>
+                        </div>
+                    </div>
+                    <div className='lg:col-span-4 col-span-7'>
+                        <div className='grid grid-cols-4'>
+                            {subMenu.map((e: subMenuType, indexP: number) => (
+                                <div key={indexP} className='col-span-4 sm:col-span-1'>
+                                    <span className='text-[#f5f5f5] text-center sm:text-left font-bold text-xl block sm:mb-7 sm:mt-0 mt-3 mb-1 '>
+                                        {e.name}
+                                    </span>
+                                    {e.menu.map((sub: MenuType, indexC: number) => (
+                                        <Link
+                                            href={sub.url}
+                                            key={indexC}
+                                            className='block sm:py-2 py-1 text-inherit text-center sm:text-left'
+                                        >
+                                            {sub.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

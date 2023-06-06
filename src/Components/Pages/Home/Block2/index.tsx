@@ -28,7 +28,7 @@ export default function Block2() {
         }
     ]
     return (
-        <div className='container 2xl:mt-[170px] xl:mt-[200px] lg:mt-[100px] md:mt-16 !mt-14 md:py-12 '>
+        <div className='container 2xl:mt-[170px] xl:mt-[220px] lg:mt-[100px] md:mt-16 mt-14 md:py-12 '>
             <div className='flex flex-col items-center '>
                 <span className='w-12 h-1 bg-gradient-orange-red rounded-full'></span>
                 <Heading
