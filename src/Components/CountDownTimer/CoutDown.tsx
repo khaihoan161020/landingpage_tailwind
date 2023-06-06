@@ -78,11 +78,11 @@ export default function CountDown({ setIsVisible }: CountDownProps) {
                                     isPaused={false}
                                 />
                             </div>
-                            <h3 className='md:text-5xl text-white'>Coming soon</h3>
+                            <h3 className='md:text-5xl text-4xl text-white'>Coming soon</h3>
 
                             <span className='text-xl font-bold text-slate-200'> {formatTime(time)}</span>
 
-                            <span className='text-slate-100 text-sm'>{`We're currently working hard on this page`}</span>
+                            <span className='text-slate-100 text-sm text-center'>{`We're currently working hard on this page`}</span>
                         </div>
                     </div>
                 </div>
